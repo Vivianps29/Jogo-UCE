@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#6c4be8">
+    <title>Desafio das Palavras</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header class="topo">
+        <div class="marca">
+            <span class="marca-icone">📚</span>
+            <span>Desafio das Palavras</span>
+        </div>
+
+        <div class="controles-topo">
+            <button id="botao-som" class="botao-som" type="button">
+                🔇 Som
+            </button>
+
+            <div class="placar">
+                ⭐ <span id="pontos-topo">0</span> pontos
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Tela inicial -->
+        <section class="tela ativa" id="tela-inicio">
+            <div class="cartao inicio">
+                <div class="estrelinhas">🌟 🐝 ✏️</div>
+
+                <h1>Desafio das Palavras!</h1>
+
+                <p class="subtitulo">
+                    Vamos brincar com as palavras?
+                    Observe as figuras, escolha a escrita correta
+                    e conquiste pontos enquanto aprende!
+                </p>
+
+                <div class="etiquetas">
+                    <span class="etiqueta">🔤 Palavras</span>
+                    <span class="etiqueta">⭐ Pontuação</span>
+                    <span class="etiqueta">🎯 10 desafios</span>
+                </div>
+
+                <p>
+                    <strong>Uma dica:</strong>
+                    leia com calma. Errar também faz parte de aprender!
+                </p>
+
+                <button class="botao-principal" id="comecar">
+                    Começar a brincar! 🚀
+                </button>
+            </div>
+        </section>
+
+        <!-- Tela do jogo -->
+        <section class="tela" id="tela-jogo">
+            <div class="linha-progresso">
+                <span id="numero-missao">Missão 1 de 10</span>
+                <span id="nivel">Nível 1</span>
+            </div>
+
+            <div
+                class="barra"
+                id="barra"
+                role="progressbar"
+                aria-label="Progresso do jogo"
+                aria-valuemin="0"
+                aria-valuemax="10"
+                aria-valuenow="0"
+            >
+                <div id="barra-preenchida"></div>
+            </div>
+
+            <div class="cartao missao">
+                <span class="categoria" id="categoria">
+                    Complete a missão
+                </span>
+
+                <h2 id="pergunta">
+                    Qual palavra está escrita corretamente?
+                </h2>
+
+                <div
+                    class="figura"
+                    id="figura"
+                    role="img"
+                    aria-label="Figura da missão"
+                >
+                    🏠
+                </div>
+
+                <p id="instrucao">
+                    Escolha a palavra correta:
+                </p>
+
+                <div class="opcoes" id="opcoes"></div>
+
+                <div
+                    class="retorno"
+                    id="retorno"
+                    role="status"
+                    aria-live="polite"
+                ></div>
+
+                <div class="acoes">
+                    <button
+                        class="botao-principal"
+                        id="continuar"
+                        hidden
+                    >
+                        Próxima missão ➜
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tela final -->
+        <section class="tela" id="tela-final">
+            <div class="cartao final">
+                <div class="trofeu" id="trofeu">🏆</div>
+
+                <h1 id="titulo-final">Parabéns!</h1>
+
+                <p class="subtitulo" id="mensagem-final">
+                    Você terminou as missões!
+                </p>
+
+                <div class="resultado">
+                    <div class="resultado-item">
+                        <span class="resultado-numero" id="pontos-final">0</span>
+                        <span>Pontos</span>
+                    </div>
+
+                    <div class="resultado-item">
+                        <span class="resultado-numero" id="acertos-final">0/10</span>
+                        <span>Acertos</span>
+                    </div>
+
+                    <div class="resultado-item">
+                        <span class="resultado-numero">⭐</span>
+                        <span>Você tentou!</span>
+                    </div>
+                </div>
+
+                <p>
+                    Continue praticando.
+                    Cada palavra nova é uma descoberta! 📚
+                </p>
+
+                <button
+                    class="botao-principal"
+                    id="jogar-novamente"
+                >
+                    Jogar novamente 🔄
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        Feito para aprender brincando 💜
+    </footer>
+
+</body>
+</html>
